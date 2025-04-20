@@ -1,0 +1,80 @@
+.hero {
+    background-image: url('../assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    padding: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    &__topbar {
+      display: flex;
+      justify-content: flex-start; 
+      align-items: center;
+      z-index: 1;
+      position: relative;
+      margin-left: 10vw;
+      width: 80%;
+    }
+
+    &__logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      cursor: pointer;
+    }
+
+    &__nav {
+      display: flex;
+      cursor: pointer;
+      gap: 2rem;
+      margin-left: auto; 
+    }
+
+    &__content {
+      position: absolute;
+      top: 50%; 
+      right: 10%; 
+      transform: translateY(-50%); 
+      text-align: justify; 
+      z-index: 1;
+      max-width: 50%; 
+    }
+
+    &__title {
+      font-size: 3.5rem;
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 2rem;
+      line-height: 1.4;
+      text-align: justify; 
+      white-space: normal; 
+      width: 100%;
+    }
+
+    &__button {
+      background-color: #dfddd9;
+      color: #333;
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: absolute;
+      right: 35%; 
+
+      &:hover {
+        background-color: #cac6c6;
+        color: #141413;
+      }
+    }
+  }
